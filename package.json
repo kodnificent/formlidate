@@ -1,0 +1,46 @@
+{
+  "name": "@kodnificent/formlidate",
+  "version": "1.0.0",
+  "description": "Javascript library for client side html form validation.",
+  "main": "dist/formlidate.js",
+  "module": "src/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "./node_modules/.bin/jest",
+    "test:watch": "./node_modules/.bin/jest --watch",
+    "minify": "cross-env NODE_ENV=production webpack --no-progress --hide-modules",
+    "build": "cross-env NODE_ENV=development webpack --progress --hide-modules",
+    "min": "npm run minify",
+    "watch": "npm run build -- --watch",
+    "make:rule": "cp ./src/rules/stubs/rule.js.stub ./src/rules/RuleName.js && cp ./src/rules/stubs/rule-test.spec.js.stub ./__tests__/rules/RuleName.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kodnificent/formlidate.git"
+  },
+  "keywords": [],
+  "author": "kodnificent <mbamaravictor@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kodnificent/formlidate/issues"
+  },
+  "homepage": "https://github.com/kodnificent/formlidate#readme",
+  "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.11.0",
+    "@babel/plugin-transform-runtime": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/runtime": "^7.11.2",
+    "babel-loader": "^8.1.0",
+    "cross-env": "^7.0.2",
+    "eslint": "^7.7.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.22.0",
+    "jest": "^26.4.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {}
+}
